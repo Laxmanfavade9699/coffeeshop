@@ -1,0 +1,747 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #050e2d;
+}
+/* scroll bar */
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #1aeeef;
+    border-radius: 6px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 7px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.sticky{
+    background: #1b2141;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+header .logo{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 700;
+}
+header .nav{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+header ul li{
+    list-style-type: none;
+    margin: 10px;
+}
+header ul li a{
+    color:white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+header ul li a:hover{
+    background: #1aeeef;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+header .action .searchBx{
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+}
+header .action .searchBx i{
+    font-size: 1.4rem;
+    margin: 5px;
+    color: #222;
+}
+
+header .action .searchBx input{
+    outline: none;
+    border: none;
+    font-size: 1em;
+    color: #222;
+}
+
+/* ========================Home-banner=============================================== */
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .bg{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .bg img{
+      /* width: 600px; */
+}
+
+.banner .bg .content{
+    width: 50%;
+    height: 100%;
+}
+.banner .bg .content h2{
+    font-size:  64px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.banner .bg .content p{
+    font-size:  1;
+    color: #dbd9d9 ;
+    letter-spacing: 1px;
+}
+
+.banner .bg .content a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    color: white;
+}
+
+.banner .bg .content a:hover{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+
+/* .banner .bg img{
+    width: 600px;
+} */
+
+/* =============================================About==================================== */
+.about{
+    position: relative;
+    width: 100%;
+    min-height: 75vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about .contentBx{
+    width: 50%;
+    margin: 20px;
+}
+.about .contentBx h2{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+}
+.about .contentBx p{
+    max-width: 600px;
+    text-align: justify;
+    color: #dbd9d9;
+}
+
+.about .contentBx a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    color: white;
+}
+
+.about .contentBx a:hover{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+
+/* ========================Games=============================================== */
+
+.games{
+    padding: 0 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px auto;
+}
+.games h2{
+    color: #fff;
+    margin: 10px 0;
+}
+.games ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.games ul li{
+    list-style-type: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #fff;
+}
+.games ul li.active{
+    background: #1aeeef;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+.games .cardBx{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.games .cardBx .card{
+    width: 300px;
+    border-radius: 10px;
+    margin: 50px 70px;
+    background: #1b2141;
+    overflow: hidden;
+}
+.games .cardBx .card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.games .cardBx .card .content{
+   padding: 10px; 
+}
+.games .cardBx .card .content h4{
+    color: #fff;
+    margin: 15px 0;
+}
+
+.games .cardBx .card .progress-line{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #35407e;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.games .cardBx .card .progress-line span{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    border-radius: 10px;
+    background: #1aeeef;
+    box-shadow: 0 0 10px #1aeeef;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.games .cardBx .card .info{
+    border-top: 2px solid #35407e;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.games .cardBx .card .info p{
+    font-size: 1em;
+    color: #fff;
+}
+.games .cardBx .card .info p span{
+    color: #1aeeef;
+}
+
+.games .cardBx .card .info a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    color: white;
+}
+
+.games .cardBx .card .info a:hover{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+
+.games .cardBx .card .info .hide{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================Tournaments=============================================== */
+.tournaments{
+    padding: 0 10px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+.tournaments h2{
+    color: #fff;
+    margin: 10px 0;
+}
+.tournaments .boxBx{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.tournaments .boxBx .box{
+    width: 450px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: #1b2141;
+    overflow: hiddens;
+}
+.tournaments .boxBx .box img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tournaments .boxBx .box .content{
+    padding: 10px;
+}
+.tournaments .boxBx .box .content h4{
+    color: #fff;
+    margin-top: 15px;
+}
+.tournaments .boxBx .box .content h4 span{
+    color: #1aeeef;
+    margin-right: 5px;
+}
+.tournaments .boxBx .box .content p{
+    text-align: justify;
+    color: #dbd9d9;
+    margin-top: 10px;
+}
+.tournaments .boxBx .box .content .btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tournaments .boxBx .box .content .btn .watch{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background: #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+
+
+.tournaments .boxBx .box .content .btn .watch:hover{     
+    border: 1px solid #1aeeef;
+    color: #fff;
+    box-shadow: none;
+    background: none;
+}
+
+.tournaments .boxBx .box .content .btn .join{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+.tournaments .boxBx .box .content .btn .join:hover{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+
+/* ========================Contact=============================================== */
+.contact{
+    padding: 20px 100px;
+    width: 100%;
+    min-height: 50vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.contact img{
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.contact .form{
+    width: 50%;
+    margin: 30px;
+}
+
+.contact .form h1{
+    color: #fff;
+}
+.contact .form .inputBx{
+    margin: 10px 0;
+}
+.contact .form .inputBx p{
+    color: #fff;
+}
+.contact .form .inputBx input,
+.contact .form .inputBx textarea{
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+    background: #1b2141;
+    min-height: 15px;
+    font-size: 1.1em;
+}
+
+.contact .form .inputBx textarea{
+    height: 150px;
+}
+
+.contact .form .inputBx input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px 0;
+    background: transparent;
+    border: 1px solid #1aeeef;
+    font-weight: 700;
+    width: 150px;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.contact .form .inputBx input[type="submit"]:hover{
+    background: #1aeeef;
+    outline: none;
+    color: #1b2141;
+    box-shadow:  0 0 10px #1aeeef;
+}
+/*======================================================================footer==============================================================*/
+footer{
+    padding: 10px 100px;
+}
+footer .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .info .logo{
+    position: relative;
+    font-weight: 700;
+    font-size: 32px;
+    color: #dbd9d9;
+    text-decoration: none;
+}
+footer .info p{
+    color: #dbd9d9;
+}
+footer .info p span{
+    font-size: 18px;
+}
+
+
+footer .info ul{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .info ul li{
+    list-style: none;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #1aeeef;
+}
+
+footer .info ul li:hover{
+    background-color: #1aeeef;
+    border: none;
+    box-shadow:  0 0 10px #1aeeef;
+    color: transparent;
+}
+.animeX{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.animeX.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* ========================Responsive-Design=============================================== */
+
+@media (max-width:991px) 
+{
+    header{
+        padding: 15px 40px;
+    }
+    header .nav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: #1b2141;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1000;
+    }
+    header .nav.active{
+        display: flex;
+    }
+    header .nav li{
+        margin: 20px 0;
+    }
+    
+    header .nav li a{
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .toggleMenu{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(images/Menu.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .toggleMenu.active{
+        background: url(images/Close.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+
+    }
+    .banner .bg img {
+        position: absolute;
+        width: 600px;
+    }
+    .banner .bg .content {
+        padding: 22px;
+        background: rgb(27, 33, 65 / 50%);
+        z-index: 1;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about .contentBx{
+        width: 100%;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .contact img{
+        height: 100%;
+        width: 100%;
+    }
+    .contact .form {
+        width: 100%;
+        margin: 30px;
+        padding: 10px;
+    }
+    .contact .form h1{
+        text-align: center;
+    }
+    footer .info{
+        flex-direction: column;
+    }
+}
+
+/* ========================Responsive-Design for 429px width=============================================== */
+@media (max-width:450px){
+    html{
+        width: 77%;
+    }
+    header {
+        padding: 5px 11px;
+    }
+    header .logo{
+        font-size: 17px;
+    }
+    header .action .searchBx{
+        padding: 0;
+        margin: 11px;
+    }
+    header .toggleMenu{
+        width: 25px;
+        height: 25px;
+        background-size: 25px;
+    }
+
+    .banner .bg img{
+        width: 403px;
+    }
+    .banner .bg .content{
+        padding: 0;
+        width: 100%;
+    }
+    .banner .bg .content h2{
+        font-size: 26px;
+        text-align: center;
+
+    }
+
+    .banner .bg .content p{
+        margin-top: 22px;
+    }
+    .banner .bg .content .btns{
+        width: 100%;
+        text-align: center;
+    }
+
+    .banner .bg .content img{
+        padding-top: 0%;
+    }
+    .about{
+        padding: 0px 3px;
+    }
+    .about .contentBx h2{
+        text-align: center;
+    }
+    .about .contentBx p{
+        padding: 36px;
+        font-size: 12px;
+    }
+    .about .contentBx{
+        text-align: center;
+    }
+    .games{
+        padding: 0 8px;
+    }
+    .games ul {
+        display: inline;
+    }
+    .games ul li{
+        text-align: center;
+    }
+
+    .games ul li.active{
+        text-align: center;
+    }
+    .contact{
+        padding: 14px 30px;
+    }
+
+    .contact .form{
+        margin: 0 30px;
+    }
+
+    .contact .form .boxes{
+        text-align: center;
+    }
+    footer .info .logo {
+        padding: 30px 0;
+    }
+    footer .info .footer-p{
+        margin-bottom: 20px;
+    }
+}
